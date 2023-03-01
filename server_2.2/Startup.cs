@@ -52,7 +52,11 @@ namespace server_2._2
 
             app.UseHttpsRedirection();
 
-            app.UseCors(x => x.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());
+            app.UseCors(x => x.AllowAnyMethod()
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+            );
+
             app.UseMvc();
         }
     }
